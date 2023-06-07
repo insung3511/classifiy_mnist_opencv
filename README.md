@@ -1,15 +1,15 @@
-# Classification MNIST Datasets using OpenCV, Numpy
+# Classification of MNIST Datasets using OpenCV and Numpy
 
-In this project, I will classification MNIST Datasets using OpenCV Convolution, Mean Squared Error and HoG (Histogram Of Oriented Gradient). This commonly worked as handcraft machine learning, becuase all of feature extraction phase.
+In this project, I will be classifying the MNIST Datasets using OpenCV for convolution, mean squared error, and HoG (Histogram of Oriented Gradient). This approach is commonly used in handcrafted machine learning due to the feature extraction phase.
 
-# Whole phase
+# Phases Overview
 
-All phase will be 2 sections, train phase and test phase.
+The project consists of two main phases: the training phase and the testing phase.
 
-## Train Phase
+## Training Phase
 
-학습 과정은 데이터의 특성을 추출하고 테스트 과정에서 입력 이미지와 실제 이미지를 비교하기 위한 용도로 쓰입니다. 해당 과정은 train.py 에서 이루어지며 Feature Extraction은 feature_extraction.py 에서 진행이 됩니다. 학습된 데이터를 우리는 __Train Threshold__ 라고 정의합니다. Train Threshold는 데이터는 Train Phase에서 Feature Extraction 거친 이미지에서 각각의 한 레이블에 대한 평균값을 구해져 있습니다.
+The training phase involves extracting features from the data and is utilized to compare input images with real images during the testing phase. This process is carried out in the `train.py` file, while the feature extraction is performed in `feature_extraction.py`. The trained data is referred to as the "__Train Threshold__," which represents the average values for each label obtained from the feature-extracted images during the training phase.
 
-## Test Phase
+## Testing Phase
 
-Test Phase 혹은 Prediction 에서는 입력 이미지와 Train Phase에서 거친 Feature Extraction을 동일하게 거치고 MSE로 비교를 합니다. 여기서 MSE가 가장 낮은 레이블이 가장 높은 확률로 동일한 이미지로 구별합니다.
+In the testing phase or prediction phase, we apply the same feature extraction process to the input images as in the training phase. We then compare them using mean squared error (MSE). The label with the lowest MSE value indicates the highest probability of the input image being classified as the corresponding label.
